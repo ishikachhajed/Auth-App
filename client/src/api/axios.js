@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://localhost:6001/api',
+  baseURL: import.meta.env.VITE_API_URL || 'https://auth-app-50ka.onrender.com/api', // Pointing to our live backend
 });
 
 // Request interceptor — attach Bearer token if user is logged in
